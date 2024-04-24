@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KHARIF CROPS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .back{
+        background-color:whitesmoke;
+        background-size: cover;
+        font-family:'Roboto', sans-serif;
+        background: linear-gradient(rgb(243, 246, 234),rgb(243, 246, 234));
+        }
+        p{
+            font-size: 25px;
+        }
+        .parent{
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .slider {
+            height: 400px;
+            margin-left: 50px;
+            position: relative;
+            width: 90%;
+            display: grid;
+            place-items: center;
+        }
+        .slide-track {
+            display: flex;
+            width: calc(300px * 4);
+            animation: scroll 20s infinite;
+        }
+        @keyframes scroll {
+            0%{
+                transform: translateX(0%);
+            }
+            25% {
+                transform: translateX(-25%);
+            }
+            50% {
+                transform: translateX(-50%);
+            }
+            75% {
+                transform: translateX(-75%);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+        .slide {
+            height: 200px;
+            width: 250px;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        .im {
+            width: 300px;
+            height: 300px;
+            transition: transform 1s;
+        }
+        .im:hover {
+            transform: scale(1.5);
+        }
+        fieldset{
+            width: 100%;
+            height: auto;
+            padding: 2.5%;
+        }
+        legend{
+            font-family: "Grape Nuts", cursive;
+            font-size: 40px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body class="back">
+<form>
+<fieldset>
+<legend><center><h1>KHARIFCROPS</h1></center></legend>
+<p><ul> <li>They grown in Rainy Season<br><br></li>
+<li>Rainy season in India is from June to September<br><br></li>
+<li>These crops require a substantial amount of water for their growth
+Kharif crops are harvested at the end of the monsoon season during September or October<br><br>
+<li>These crops are also known as Paddy crops.</li>
+</p><br>
+<p><li>Some crops like Rice, Corn, Soyabean, Sugarcane, Groundnut, Cotton which were grown in the summer season.</li>
+</p>
+</ul>
+<div class="parent">   
+    <div class="slider">
+      <div class="slide-track">
+          <div class="slide">
+              <img class="im" src="public/images/zaid1.jpg" alt="">
+          </div>
+          <div class="slide">
+              <img class="im" src="public/images/zaid2.jpg" alt="">
+          </div>
+          <div class="slide">
+              <img class="im" src="public/images/zaid3.jpg" alt="">
+          </div>
+          <div class="slide">
+              <img class="im" src="public/images/rabi1.jpg" alt="">
+          </div>
+          <div class="slide">
+              <img class="im" src="public/images/rabi2.jpg" alt="">
+          </div>
+          <div class="slide">
+              <img class="im" src="public/images/rabi3.jpg" alt="">
+          </div>
+      </div>
+    </div>
+</div>
+</fieldset>
+</form>
+</body>
+</html>

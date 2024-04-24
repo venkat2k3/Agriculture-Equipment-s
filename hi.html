@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Website</title>
+    <link rel="stylesheet" href="public/css/hello.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150vh;
+}
+
+.centered {
+    text-align: center;
+}
+  .centered  p{
+        color: #fff;
+        font-size: 30px;
+        font-family: 'Grape nut',cursive;
+        font-weight: 500;
+    }
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    width: 200px;
+    padding: 13px;
+    align-items: center;
+    height: 80px;
+    border-radius: 40px;
+    font-size: 25px;
+    border: 1px dotted #fff;
+    box-shadow: 5px #fff;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: transparent;
+}
+.drop {
+    position: relative;
+    display: inline-block;
+}
+.content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px #fff;
+    z-index: 1;
+}
+.content a {
+    font-size: 20px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.content a:hover {
+    background-color: transparent;
+}
+.drop:hover .content {
+    display: block;
+}
+.drop:hover .dropbtn {
+    background-color: transparent;
+}
+.why {
+        position: absolute;
+        left: 0;
+        bottom: 30px;
+        margin-left: 10px; 
+        background-color: #333;
+        border: 1px solid #fff;
+        border-radius: 40px;
+        padding-top:20px;
+        padding-left: 10px;
+        width: 440px;
+        height: 180px;
+        color: #fff;
+        font-size: 16px;
+    }
+.why p{
+    color: #fff;
+    font-size: 20px;
+
+}
+.important p{
+        position: absolute;
+        right: 0;
+        bottom: 0px;
+        margin-right: 0px; 
+        background-color: #333;
+        border: 1px solid #fff;
+        border-radius: 40px;
+        padding-top: 20px;
+        padding-left: 10px;
+        width: 400px;
+        height: 150px;
+        color: #fff;
+        font-size: 16px;
+    }
+.important p{
+    color: #FFF;
+    font-size: 20px;
+
+}
+</style>
+</head>
+<body>
+    <div class="hero">
+        <video autoplay loop muted playsinline class="back-video">
+            <source src="public/images/back-video3.mp4">
+        </video>
+        <nav>
+            <img src="logo.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="hi.html"><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="images1.html"><i class="fa fa-store"></i> PRODUCTS</a>
+                        <div class="content">
+                            <a href="heavy meachines.html">Heavy Machines</a>
+                            <a href="fertilizers.html">Fertilizers</a>
+                            <a href="pesticides.html">Pesticides</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="present auctions.html"><i class="fa fa-buy-n-large"></i> AUCTIONS</a></li>
+                <li><a href="sell-mine.html"><i class="fa fa-hand-holding-dollar"></i> SELL MINE</a></li>
+                <li><a href="cart.html"><i class="fa fa-cart-shopping"></i> CART</a></li>
+                <li><a href="login.html"><i class="fa fa-user-plus"></i> LOGIN</a></li>
+            </ul>
+        </nav>
+        <div class="centered">
+            <p>"The ultimate goal of farming is not the growing of crops, but the cultivation and perfection of human beings."</p>
+            <ul>
+                <li>
+                    <div class="drop">
+                       <button class="dropbtn">Explore</i></button>
+                        <div class="content">
+                            <a href="heavy meachines.html">Heavy Machines</a>
+                            <a href="fertilizers.html">Fertilizers</a>
+                            <a href="pesticides.html">Pesticides</a>
+                            <a href="present auctions.html">Auctions</a>
+                            <a href="sell-mine.html">Sell-mine</a>
+                            <a href="Login.html">Login</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>   
+        <div class="why">
+            <p> <strong>Why mordern Agriculture?</strong><br>It is crucial for ensuring food security, improving livelihoods for farmers, and promoting sustainable agricultural practices in a rapidly changing world.</p>
+        </div>
+        <div class="important">
+            <p><strong>Importance of Modern Agriculture?</strong><br>1.Increased Food Production.<br>2.Efficiency and Sustainability.<br>3.Innovation and Technology</p></div>     
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col">
+                <h4>Profile</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="email.html">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="images1.html">Shoping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="email.html">Payment Options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Online Shop</h4>
+                <ul>
+                    <li><a href="heavy meachines.html">Heavy Machines</a></li>
+                    <li><a href="FERTILIZERS.html">Fertilizers</a></li>
+                    <li><a href="PESTICIDES.html">Pesticides</a></li>
+                    <li><a href="cart.html">Bag</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

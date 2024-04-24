@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    <title>FERTILIZERS</title>
+    <style>
+        .color{
+            padding-top: -10px;
+            color: black;
+            align-items: center;
+        }
+        body{
+          background: linear-gradient(rgb(243, 246, 234),rgb(243,246,243));
+        }
+        .org{
+          width: 95%;
+          height: 270px;
+          padding: 2.5%;
+        }
+        .syn{
+          width: 95%;
+          height: 1200px;
+          padding: 2.5%;
+        }
+        legend{
+            font-family: "Grape Nuts", cursive;
+            font-size: 40px;
+            font-weight: bolder;
+        }
+        .hi{
+          background-color: rgb(243,246,243);
+          border-radius: 16px;
+            border: 5px;
+            width: 250px;
+            border-radius: 3px solid rgb(243,246,243);
+            box-shadow: 8px 8px 8px rgb(243,246,243);
+        }
+        img{
+          border-radius: 16px;
+        }
+  .product-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.price {
+  margin-right: 5px;
+}
+
+.currency {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+    </style>
+    <script>
+      const priceElement = document.querySelector('.price');
+const costData = getCostDataFromBackend();
+priceElement.textContent = '$' + costData.cost.toFixed(2);
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1 class="color"><center><strong>FERTILIZERS</strong></center></h1>
+    <div>
+      <fieldset class="org">
+        <legend> ORGANIC FERTILIZERS </legend>
+        <div style="display:grid;
+        margin-top:2px;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 100px;
+        row-gap: 100px;">
+    <div style="height:200px;" class="hi"><a href="organic.html" target="_blank">
+      <img src="public/images/organic.png" alt="organic" style="width: 250px; height: 200px;"></a>
+      <figcaption><p class="color">ORGANIC MATTER<br></p></figcaption></div> 
+    <div style="height:200px;" class="hi"> <a href="jivamruth.html" target="_blank">
+      <img src="public/images/images.jpg" alt="organic" style="width: 250px; height: 200px;"></a>
+      <figcaption><p class="color">ORGANIC JIVAMRUTHA<br></p></figcaption></div> 
+    <div style="height:200px;" class="hi"> <a href="mannuer.html" target="_blank">
+      <img src="public/images/fert.jpg" alt="organic" style="width: 250px; height: 200px;"></a>
+      <figcaption><p class="color">ORGANIC MANNURE<br></p></figcaption></div> 
+    </div>
+  </div>
+  </fieldset>
+  </div>
+  <div>
+    <fieldset class="syn">
+      <legend> SYNTHETIC FERTILIZERS </legend>
+      <div style="display:grid;
+    margin-top:2px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 100px;">
+  <div style="height:200px;" class="hi"><a href="ammonium.html" target="_blank">
+<img src="public/images/ammonium.png" alt="ammonium" style="width:250px; height:200px;"></a>
+<figcaption><p class="color">AMMONIUM<br></p></figcaption>
+<div class="product-price">
+  <span class="price">₹860</span>
+  <span class="currency">INR</span>
+</div></div>
+  <div style="height:200px;" class="hi"><a href="nitrogen.html" target="_blank">
+    <img src="public/images/nitrogen.png" alt="nitrogen" style="width:250px; height:200px;"></a>
+    <figcaption><p class="color">NITROGEN</p></figcaption>
+    <div class="product-price">
+      <span class="price">₹930</span>
+      <span class="currency">INR</span>
+    </div></div>
+  <div style="height:200px;" class="hi"><a href="npk-1.html" target="_blank">
+    <img src="public/images/npk.png" alt="npk" style="width:250px; height:200px;"></a>
+    <figcaption><p class="color">NPK</p></figcaption>
+    <div class="product-price">
+      <span class="price">₹1000</span>
+      <span class="currency">INR</span>
+    </div></div> 
+<div style="height:200px;" class="hi"><a href="potassium.html" target="_blank">
+  <img src="public/images/potassium.png" alt="potassium" style="width:250px; height: 200px;"></a>
+  <figcaption><p class="color">POTASSIUM</p><br></figcaption>
+  <div class="product-price">
+    <span class="price">₹1050</span>
+    <span class="currency">INR</span>
+  </div></div>
+<div style="height:200px;" class="hi"><a href="urea.1.html" target="_blank">
+  <img src="public/images/urea.png" alt="urea" style="width:250px; height:200px;"></a>
+  <figcaption><p class="color">UREA</p></figcaption>
+  <div class="product-price">
+    <span class="price">₹1230</span>
+    <span class="currency">INR</span>
+  </div></div>
+<div style="height:200px;" class="hi"><a href="zinc.html" target="_blank">
+  <img src="public/images/zinc.png" alt="zinc" style="width:250px; height:200px;"></a>
+  <figcaption><p class="color">ZINC</p></figcaption>
+  <div class="product-price">
+    <span class="price">₹770</span>
+    <span class="currency">INR</span>
+  </div></div>
+<div style="height:200px;" class="hi"><a href="pospurous1.html" target="_blank">
+  <img src="public/images/phosporous.png"  alt="phosporous" style="width:250px; height:200px;"></a>
+  <figcaption><p class="color">PHOSPOROURS</p></figcaption>
+  <div class="product-price">
+    <span class="price">₹865</span>
+    <span class="currency">INR</span>
+  </div></div>
+<div style="height:200px;" class="hi"><a href="ammoniumchloride-1.html" target="_blank">
+  <img src="public/images/download.jpg"  alt="calcium" style="width:250px; height:200px;"></a>
+  <figcaption><p class="color">AMMONIUM CHLORIDE</p>
+    <div class="product-price">
+      <span class="price">₹860</span>
+      <span class="currency">INR</span>
+    </div>
+  </figcaption></div> 
+<div style="height:200px;" class="hi"><a href="magnesium-1.html" target="_blank">
+  <img src="public/images/magnesium.jpg"  alt="Magnesium" style="width:250px; height:200px;"></a>
+  <figcaption><p class="color">MAGNESIUM</p></figcaption>
+  <div class="product-price">
+    <span class="price">₹1350</span>
+    <span class="currency">INR</span>
+  </div></div>
+<div style="height:200px;" class="hi"><a href="sulphur-1.html"target="_blank">
+  <img src="public/images/Sulphur.png"  alt="sulphur" style="width:250px; height:200px;"></a>
+  <figcaption><p class="color">SULPHUR</p></figcaption>
+  <div class="product-price">
+    <span class="price">₹1050</span>
+    <span class="currency">INR</span>
+  </div></div>
+<div style="height:200px;" class="hi"><a href="boron-1.html" target="_blank">
+  <img src="public/images/boron.jpg"  alt="boron" style="width:250px; height:200px;"></a>
+  <figcaption><p class="color">BORON</p></figcaption>
+  <div class="product-price">
+    <span class="price">₹980</span>
+    <span class="currency">INR</span>
+  </div></div> 
+<div style="height:200px;" class="hi"><a href="super-1.html" target="_blank">
+  <img src="public/images/super.jpg"  alt="super" style="width:250px; height:200px;"></a>
+  <figcaption><p class="color">SUPER PHOSPHATE</p></figcaption>
+  <div class="product-price">
+    <span class="price">₹1480</span>
+    <span class="currency">INR</span>
+  </div></div>
+  </div>
+</fieldset>
+</div>
+</body>
+</html>

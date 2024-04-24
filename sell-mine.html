@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sell Your Product</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: linear-gradient(rgb(182, 175, 175));
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        overflow: scroll;
+    }
+    .container {
+        display: flex;
+        height: 100%;
+    }
+    .form-column {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-form {
+        font-size: 30px;
+        color: #333;
+        width: 90%;
+        max-width: 400px;
+        padding: 30px;
+        border: none;
+        border-radius: 5px;
+    }
+    input[type="text"], input[type="number"], input[type="file"] {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .image-column {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent; 
+    }
+    .photo-container {
+        width: 80%;
+        max-width: 400px;
+        height: 90%;
+        max-height: 400px;
+        background-color: transparent;
+        border: 1px dotted;
+        border-radius: 5px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    button {
+        margin-top: 10px;
+    }
+    img {
+        height: 800px;
+        width: 100%;
+    }
+    h1 {
+        padding-top:  50px;
+        font-size: 40px;
+        color: #333;
+    }
+
+    .product {
+        display: block;
+        border: none;
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .product img {
+        float: left;
+        height: 300px;
+        width: 400px;
+        padding: 20px 20px;
+    }
+
+    .dis {
+        align-items: center;
+        padding-top: 20px;
+        overflow: hidden;
+        padding-right: 20px;
+        font-size: x-large;
+        margin-left: 430px;
+    }
+</style>
+</head>
+<body>
+    <center>
+        <h1>Sell Your Product</h1>
+    </center>
+<div class="container">
+    <div class="form-column">
+        <div class="product-form">
+            <form id="productForm">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" required>
+                <label for="productDescription">Product Description:</label>
+                <input type="text" id="productDescription" required>
+                <label for="productPhoto">Product Photo:</label>
+                <input type="file" id="productPhoto" accept="image/*" required>
+                <label for="productOriginalPrice">Original Price (INR):</label>
+                <input type="number" id="productOriginalPrice" required>
+                <label for="productSellingPrice">Selling Price (INR):</label>
+                <input type="number" id="productSellingPrice" required>
+                <button type="submit" id="submitProduct">Submit</button>
+            </form>
+            <button id="sellButton" style="display: none;">Sell</button>
+        </div>
+    </div>
+    <div class="image-column">
+        <div class="photo-container" id="photoContainer"></div>
+    </div>
+</div>
+<div class="product" id="product1">
+    <img src="public/images/trashing.jpg">
+    <div class="dis">
+        <p><strong>Paaddy-Harvester</strong></p>
+        <p>Precision and Quality, Labor Savings cost Saving.<br>
+        Increased Productivity : Farmers can harvest more crops in less time, leading to higher overall productivity and profitability.</p>
+        <span class="cost">Original Price: ₹4,00,000 INR</span><br><br>
+        <span class="cost">Selling Price: ₹1,90,000 INR</span>
+    </div>
+</div>
+<div class="product" id="product2">
+    <img src="public/images/tractor3.jpg">
+    <div class="dis">
+        <p><strong>Troctor</strong></p>
+        <p>Troctor is a powerful vehicle specially designed for hauling and used for various farming tasks <br> Troctors are used  to Plow,Till,Plant and Cultivate crops.</p>
+        <span class="cost">Original Price: ₹3,00,000 INR</span><br><br>
+        <span class="cost">Selling Price: ₹1,50,000 INR</span>
+        </div>
+</div>
+<div class="product" id="product3">
+    <img src="public/images/cameleon.jpg">
+    <div class="dis">
+        <p><strong> Paddy TransPlanter(Cameleon)</strong></p>
+        <p>Paddy transplanters are designed specifically for the rice planting process.<br>IT plays a crucial in countries where rice is a staple crop as it ensures faster planting and more uniform crop establishment.  </p>
+        <span class="cost">Original Price: ₹2,00,000 INR</span><br><br>
+        <span class="cost">Selling Price: ₹90,000 INR</span>
+        </div>
+</div>
+<div class="product" id="product4">
+    <img src="public/images/Baumwoll-Erntemaschi.jpg">
+    <div class="dis">
+        <p><strong>Cotton-Harvester</strong></p>
+        <p>Troctor is a powerful vehicle specially designed for hauling and used for various farming tasks <br> Troctors are used  to Plow,Till,Plant and Cultivate crops.</p>
+        <span class="cost">Original Price: ₹3,00,000 INR</span><br><br>
+        <span class="cost">Selling Price: ₹1,50,000 INR</span>
+        </div>
+</div>
+<div class="product" id="product5">
+    <img src="public/images/drons.jpg">
+    <div class="dis">
+        <p><strong>Dron-sprayer</strong></p>
+        <p>A drone sprayer specifically designed to spray agricultural <br>chemicals such as pesticides, herbicides, fertilizers, and fungicides over crops.</p>
+        <span class="cost">Original Price: ₹5,00,000 INR</span><br><br>
+        <span class="cost">Selling Price: ₹3,50,000 INR</span>
+        </div>
+</div>
+<div class="product" id="product6">
+    <img src="public/images/seedplanting.webp">
+    <div class="dis">
+        <p><strong>Seed-Transplanter</strong></p>
+        <p>Seed drill plays a crucial role in increasing ccrop yields <br>improves the efficiecy and effectiveness of planting</p>
+        <span class="cost">Original Price: ₹6,00,000 INR</span><br><br>
+        <span class="cost">Selling Price: ₹4,50,000 INR</span>
+       </div>
+</div>
+<script>
+    document.getElementById('productPhoto').addEventListener('change', function(event) {
+        var file = event.target.files[0];
+        if (file) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('photoContainer').style.backgroundImage = "url('" + e.target.result + "')";
+            }
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+</body>
+</html>

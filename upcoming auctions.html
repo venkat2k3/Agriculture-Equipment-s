@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/e8fa2e31b4.js" crossorigin="anonymous"></script>
+    <style>
+        fieldset {
+            width: 95%;
+            height: auto;
+            padding: 2%;
+        }
+
+        legend {
+            font-family: "Grape Nuts", cursive;
+            font-size: 60px;
+            font-weight: bolder;
+        }
+
+        .product {
+            display: block;
+            border: 1px solid black;
+            height: auto;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .product img {
+            float: left;
+            height: 280px;
+            width: 400px;
+            padding: 10px 20px;
+        }
+
+        .dis {
+            overflow: hidden;
+            padding-right: 20px;
+            font-size: x-large;
+            margin-left: 430px;
+        }
+
+        .bid-button {
+            margin-top: 20px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .bid-input {
+            margin-top: 10px;
+            padding: 5px;
+        }
+
+        .bid-status {
+            margin-top: 10px;
+        }
+
+        .timer {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>UPCOMING AUCTIONS</legend>
+        <div class="product" id="product1">
+            <img src="public/images/trashing.jpg">
+            <div class="dis">
+                <p>1. Precision and Quality, Labor Savings cost Saving </p>
+                <p>2. Increased Productivity: Farmers can harvest more crops in less time, leading to higher overall productivity and profitability.</p>
+                <span class="cost">₹99,900 INR</span>
+                <div class="bid-container">
+                    <input type="number" class="bid-input" placeholder="Enter your bid">
+                    <button type="button" class="bid-button" onclick="placeBid(0)">Place Bid</button>
+                    <p class="bid-status">Current highest bid: ₹99,900 INR</p>
+                </div>
+                <div class="timer" id="timer1"></div>
+            </div>
+        </div>
+        <div class="product" id="product2">
+            <img src="public/images/tractor3.jpg">
+            <div class="dis">
+                <p>1. Precision and Quality, Labor Savings cost Saving </p><br>
+                <p>2. Increased Productivity: Farmers can harvest more crops in less time, leading to higher overall productivity and profitability.</p>
+                <span class="cost">₹1,29,900 INR</span>
+                <div class="bid-container">
+                    <input type="number" class="bid-input" placeholder="Enter your bid">
+                    <button type="button" class="bid-button" onclick="placeBid(1)">Place Bid</button>
+                    <p class="bid-status">Current highest bid: ₹1,29,900 INR</p>
+                </div>
+                <div class="timer" id="timer2"></div>
+            </div>
+        </div>
+        <script>
+            const timers = [15, 30];
+            let countdowns = [];
+
+            function startTimer(productIndex) {
+                const timerElement = document.getElementById(`timer${productIndex + 1}`);
+                let timeLeft = timers[productIndex];
+                countdowns[productIndex] = setInterval(() => {
+                    if (timeLeft <= 0) {
+                        clearInterval(countdowns[productIndex]);
+                        timerElement.textContent = "Time's up! Bidding closed.";
+                        addToCart(productIndex);
+                        disableBidding(productIndex);
+                    } else {
+                        const hours = Math.floor(timeLeft / 3600);
+                        const minutes = Math.floor((timeLeft % 3600) / 60);
+                        const seconds = timeLeft % 60;
+                        timerElement.textContent = `Time left: ${hours}h ${minutes}m ${seconds}s`;
+                        timeLeft--;
+                    }
+                }, 1000);
+            }
+
+            function disableBidding(productIndex) {
+                const bidInput = document.querySelectorAll('.bid-input')[productIndex];
+                const bidButton = document.querySelectorAll('.bid-button')[productIndex];
+                bidInput.disabled = true;
+                bidButton.disabled = true;
+            }
+
+            function updateAuctionStatus() {
+                const products = document.querySelectorAll('.product');
+                products.forEach((product, index) => {
+                    const currentBid = getCurrentBid(index);
+                    const bidStatusElement = product.querySelector('.bid-status');
+                    bidStatusElement.textContent = `Current highest bid: ₹${currentBid} INR`;
+                });
+            }
+
+            setInterval(updateAuctionStatus, 1000);
+
+            function getCurrentBid(index) {
+                const bids = [999, 1299];
+                return bids[index];
+            }
+
+            function placeBid(index) {
+                const bidInput = document.querySelectorAll('.bid-input')[index];
+                const bidAmount = parseFloat(bidInput.value);
+                if (bidAmount <= 0 || isNaN(bidAmount)) {
+                    alert("Invalid bid amount. Please enter a valid number greater than 0.");
+                    return;
+                }
+                alert(`Bid placed successfully for ₹${bidAmount} INR on product ${index + 1}`);
+                updateAuctionStatus();
+            }
+            for (let i = 0; i < timers.length; i++) {
+                startTimer(i);
+            }
+        </script>
+    </fieldset>
+</body>
+</html>

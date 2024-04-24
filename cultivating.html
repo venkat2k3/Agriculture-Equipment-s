@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    <title>CULTIVATING-TRACTOR</title>
+    <style>
+    .cultivation{
+  color: black;
+  text-shadow: 5px;
+  background: fixed;
+  padding: 15px;
+  margin: 5px;
+ font-size: 35px;
+}
+.image{
+    float: right;
+    margin-right: 40px;
+}
+img{
+    border-radius: 10px;
+
+}
+.button{
+color: white;
+text-align: center;
+align-items: center;
+padding-left: 200px;
+border-radius: 5px;
+}
+.header{
+    color: blueviolet;
+}
+.cart{
+    display: flex;
+    border: 2px solid;
+    border-radius: 15px;
+    height: 60px;
+    width: 200px;
+    text-shadow: 3px;
+    padding-left: 33px;
+    text-align: center;
+    align-items: center;
+    margin-right: 150px;
+    font-size: 20px;
+    float: right;
+    background-color: rgb(154 158 64);
+}
+.cart:hover{
+    cursor: pointer;
+    color: #fff;
+}
+.currency{
+    float: right;
+    padding-top: 350px;
+}
+.price{
+    float: right;
+    font-size: 40px;
+    padding-top: 350px;
+}
+legend{
+    font-size: 60px;
+    align-items: center;
+    font-family: 'Grape nut',cursive;
+}
+fieldset{
+    height: auto;
+}
+.color{
+    padding-top: 50px;
+    font-size: 30px;
+    color: black;
+    align-items: center;
+}
+.inr{
+    font-size: 18px;
+}
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>CULTIVATING TRACTOR</legend>
+    <div class="image">
+        <img src="public/images/cultivating.jpg" align="right" height="300px" width="300px">
+        <figcaption>
+            <p class="color">₹4,75,000 <span class="inr">INR</span></p>
+          </figcaption>
+    </div>
+    <div class="cultivation">
+        <p class="header">ADVANTAGES OF CULTIVATING TRACTORS?</p>
+        1.Has multiple uses.<br>
+        2.More precise work.and Saves time and effort.<br>
+        3.Suitable for small and large farmlands.and Cost-efficient.<br>
+        <p class="header">DISADVANTAGES OF CULTIVATING TRACTORS ?</p>
+       1.Tractors are not as fast as other types of farm machinery like combines, planters and harvesters.<br>
+        2.They require more fuel to operate.<br>
+        3.Tractors use large amounts of land for cultivation.<br>
+        4.They need to be driven by a person.
+        </div>
+        <a href="present auctions.html"><button class="cart">AUCTIONS</button></a>
+        <a href="cart.html"><button class="cart">VIEW BAG</button></a>
+<button onclick="addToCart()" class="cart">ADD TO CART</button>
+        </fieldset>
+<script>
+  function addToCart() {
+    var cart = localStorage.getItem('cart');
+    if (!cart) {
+        cart = [];
+    } else {
+        cart = JSON.parse(cart);
+    }
+
+    var product = {
+        name: "Cultivating-troctor",
+        price: "4,75,000"
+    };
+
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+</script>
+</body>
+</html>
